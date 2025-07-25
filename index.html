@@ -6,28 +6,42 @@
     <title>pHero Assignment 02</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-
-  <body class="m-20 max-w-7xl mx-auto">
-    <!-- NavBar -->
+  <!-- Body -->
+  <body class="p-10 max-w-7xl mx-auto">
+    <!-- Header -->
     <header class="flex justify-between">
-      <div>
+      <div class="border-2">
         <img src="images/logo.png" alt="Logo of Faugei" />
       </div>
-      <div class="flex">
-        <ul class="flex">
-          <li class="p-2">Home</li>
-          <li class="p-2 color-s">Shop</li>
-          <li class="p-2">About Us</li>
-        </ul>
-        <div class="p-2">Cart(27$)</div>
-      </div>
+      <!-- Mavbar -->
+      <nav class="flex">
+        <!-- Hidden for small display -->
+        <div class="hidden sm:block">
+          <ul class="border-2 flex r-5">
+            <li class="border-2 p-2">Home</li>
+            <li class="border-2 p-2">Shop</li>
+            <li class="p-2">About Us</li>
+          </ul>
+        </div>
+        <!-- Cart -->
+        <div class="flex items-center justify-center">
+          <img
+            class="border-2 h-16 w-16"
+            src="icons/icon-cart.png"
+            alt="Cart"
+          />
+          <p class="border-2 flex items-center justify-center h-16 px-4">
+            Cart(27$)
+          </p>
+        </div>
+      </nav>
     </header>
 
-    <!-- Banner -->
-    <section class="flex justify-between mt-20">
+    <!-- Banner - Always Fresh Flowers -->
+    <section class="mt-20 flex flex-col-reverse sm:flex-row justify-between">
       <div>
         <h1 class="font-bold">ALWAYS FRESH FLOWERS</h1>
-        <p class="font-thin text-gray-500">
+        <p class="text-gray-500">
           Indulge your senses with the beauty and fragrance of our fresh flower
           shop. From classic roses to exotic blooms, we offer a wide variety of
           fresh flowers that are perfect for any occasion.
@@ -42,14 +56,14 @@
     <section class="mt-20 text-center">
       <div>
         <h1 class="font-bold">Our Plants</h1>
-        <p class="font-thin text-gray-500 mx-30">
+        <p class="text-gray-500 mx-30">
           Indulge your senses with the beauty and fragrance of our fresh flower
           shop. From classic roses to exotic blooms, we offer a wide variety of
           fresh.
         </p>
       </div>
-      <!-- Cards -->
-      <div class="mt-10 grid grid-cols-4 gap-5">
+      <!-- 8 Cards -->
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-5">
         <div>
           <img
             class="w-full rounded-lg"
@@ -58,7 +72,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -70,7 +86,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -82,7 +100,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -94,7 +114,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -106,7 +128,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -118,7 +142,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -130,7 +156,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -142,7 +170,9 @@
           />
           <h3>Lily Blossom</h3>
           <p class="font-medium">20 USD</p>
-          <button class="p-2 bg-orange-500 rounded-md w-full">
+          <button
+            class="p-2 bg-orange-500 hover:bg-orange-600 rounded-md w-full"
+          >
             Add To Cart
           </button>
         </div>
@@ -150,7 +180,7 @@
     </section>
 
     <!-- Flower & Plants Lover -->
-    <section class="mt-20 flex">
+    <section class="mt-20 flex flex-col sm:flex-row">
       <div class="w-full">
         <img src="images/flower-plants.png" alt="" />
       </div>
@@ -180,18 +210,18 @@
     <section class="mt-20 text-center">
       <div>
         <h1 class="font-bold">Latest Deals</h1>
-        <p class="font-thin text-gray-500">
+        <p class="text-gray-500">
           Indulge your senses with the beauty and fragrance of our fresh flower
           shop. <br />
           From classic roses to exotic blooms, we offer a wide variety of fresh.
         </p>
       </div>
-
-      <!-- Pictures -->
-      <div class="grid grid-cols-[1fr_1.5fr] gap-5 mt-20">
+      
+      <!-- Picture 1 -->
+      <div class="mt-20 grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-5">
         <div class="relative text-white">
           <img
-            class="rounded-2xl w-full"
+            class="w-full rounded-2xl"
             src="images/deal-ana.png"
             alt="Deal Ana"
           />
@@ -203,6 +233,7 @@
           </div>
         </div>
 
+        <!-- Picture 2 -->
         <div class="relative text-white row-span-2">
           <img
             class="rounded-3xl w-full h-full object-cover"
@@ -217,6 +248,7 @@
           </div>
         </div>
 
+        <!-- Picture 3 -->
         <div class="relative text-white">
           <img
             class="rounded-2xl w-full"
@@ -233,7 +265,7 @@
       </div>
     </section>
 
-    <!-- Join -->
+    <!-- Join the colorful branch -->
     <section class="mt-20 text-center relative">
       <img class="w-full" src="images/join-flower.png" alt="Join Flower" />
 
@@ -247,23 +279,27 @@
             type="email"
             placeholder="Write your email"
           />
-          <button class="bg-orange-500 text-white w-1/4">Subscribe</button>
+          <button class="bg-orange-500 text-white w-1/4 hover:bg-orange-600">
+            Subscribe
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <section class="grid grid-cols-3 mt-20 gap-10">
+    <footer class="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-3">
       <div>
         <img src="images/logo.png" alt="Logo" />
-        <p class="font-thin text-gray-500">
+        <p class="text-gray-500">
           Indulge your senses with the beauty and fragrance of our fresh flower
           shop. From classic roses to exotic blooms, we offer a wide variety of
           fresh flowers that are perfect for any occasion.
         </p>
       </div>
       <div>
-        <ul class="font-thin text-gray-500 flex gap-4 justify-around">
+        <ul
+          class="text-gray-500 flex flex-col gap-4 justify-around sm:flex-row"
+        >
           <div class="flex flex-col gap-5">
             <li>Home</li>
             <li>About Us</li>
@@ -288,6 +324,6 @@
           <li><img src="icons/icon-youtube.png" alt="Youtube Icon" /></li>
         </ul>
       </div>
-    </section>
+    </footer>
   </body>
 </html>
