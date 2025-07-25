@@ -7,37 +7,43 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <!-- Body -->
-  <body class="p-10 max-w-7xl mx-auto">
-    <!-- Header -->
+  <body class="p-7 max-w-7xl mx-auto sm:p-10">
+    
+    <!-- Header Section -->
     <header class="flex justify-between">
-      <div class="border-2">
-        <img src="images/logo.png" alt="Logo of Faugei" />
+
+      <!-- logo -->
+      <div>
+        <img class="h-20" src="images/logo.png" alt="Logo of Faugei" />
       </div>
-      <!-- Mavbar -->
-      <nav class="flex">
-        <!-- Hidden for small display -->
+
+      <!-- mavbar -->
+      <nav class="flex items-center">
+
+        <!-- hidden for small display -->
         <div class="hidden sm:block">
-          <ul class="border-2 flex r-5">
-            <li class="border-2 p-2">Home</li>
-            <li class="border-2 p-2">Shop</li>
-            <li class="p-2">About Us</li>
+          <ul class="flex gap-5 pr-5">
+            <li class="font-bold">Home</li>
+            <li class="font-light">Shop</li>
+            <li class="font-light">About Us</li>
           </ul>
         </div>
-        <!-- Cart -->
-        <div class="flex items-center justify-center">
+
+        <!-- cart -->
+        <div class="flex gap-1">
           <img
-            class="border-2 h-16 w-16"
+            class="h-10 w-10"
             src="icons/icon-cart.png"
             alt="Cart"
           />
-          <p class="border-2 flex items-center justify-center h-16 px-4">
-            Cart(27$)
+          <p class="flex items-center font-medium">
+            Cart($27)
           </p>
         </div>
       </nav>
     </header>
 
-    <!-- Banner - Always Fresh Flowers -->
+    <!-- Banner Section -->
     <section class="mt-20 flex flex-col-reverse sm:flex-row justify-between">
       <div>
         <h1 class="font-bold">ALWAYS FRESH FLOWERS</h1>
@@ -52,8 +58,8 @@
       </div>
     </section>
 
-    <!-- Our Plants -->
-    <section class="mt-20 text-center">
+    <!-- Our Plants Section -->
+    <section class="hidden mt-20 text-center">
       <div>
         <h1 class="font-bold">Our Plants</h1>
         <p class="text-gray-500 mx-30">
@@ -179,14 +185,23 @@
       </div>
     </section>
 
-    <!-- Flower & Plants Lover -->
-    <section class="mt-20 flex flex-col sm:flex-row">
-      <div class="w-full">
-        <img src="images/flower-plants.png" alt="" />
+    <!-- Flower & Plants Lover (with badge)-->
+    <section class="mt-20 grid grid-cols-1 sm:grid-cols-2 sm:mt-40 relative">
+
+      <!-- badge -->
+      <div class="hidden sm:block absolute left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <img class="w-40" src="images/trusted-badge.png" alt="Trusted Badge">
       </div>
-      <div class="p-10">
+
+      <!-- image -->
+      <div class="">
+        <img src="images/flower-plants.png" alt="flower & plants lover picture" />
+      </div>
+
+      <!-- text -->
+      <div class="mt-7 sm:ml-7">
         <h1 class="font-bold">Flower & Plants Lover</h1>
-        <ul class="list-disc">
+        <ul class="list-disc pl-7">
           <li class="text-gray-500">
             Indulge your senses with the beauty and fragrance of our fresh
             flower shop. From classic roses to exotic blooms, we offer a wide
@@ -206,37 +221,39 @@
       </div>
     </section>
 
-    <!-- Latest Deals -->
+    <!-- Latest Deals Section -->
     <section class="mt-20 text-center">
+      <!-- text -->
       <div>
         <h1 class="font-bold">Latest Deals</h1>
-        <p class="text-gray-500">
+        <p class="px-7 sm:px-20 text-gray-500">
           Indulge your senses with the beauty and fragrance of our fresh flower
-          shop. <br />
-          From classic roses to exotic blooms, we offer a wide variety of fresh.
+          shop. From classic roses to exotic blooms, we offer a wide variety of fresh.
         </p>
       </div>
-      
-      <!-- Picture 1 -->
-      <div class="mt-20 grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-5">
-        <div class="relative text-white">
+
+      <!-- pictures -->
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-5">
+
+        <!-- picture 1 -->
+         <div class="relative text-white">
           <img
-            class="w-full rounded-2xl"
-            src="images/deal-ana.png"
-            alt="Deal Ana"
+            class="rounded-2xl w-full"
+            src="images/deal-bloom.png"
+            alt="Deal Bloom"
           />
           <div
             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
           >
-            <h3>60% Off | Ana Plant</h3>
+            <h3>60% Off | Bloom Plant</h3>
             <h3 class="underline">Shop Now</h3>
           </div>
         </div>
 
-        <!-- Picture 2 -->
+        <!-- picture 2 -->
         <div class="relative text-white row-span-2">
           <img
-            class="rounded-3xl w-full h-full object-cover"
+            class="rounded-2xl w-full object-cover"
             src="images/deal-zabo.png"
             alt="Deal Zabo"
           />
@@ -248,26 +265,26 @@
           </div>
         </div>
 
-        <!-- Picture 3 -->
+        <!-- picture 3 -->
         <div class="relative text-white">
           <img
-            class="rounded-2xl w-full"
-            src="images/deal-bloom.png"
-            alt="Deal Bloom"
+            class="w-full rounded-2xl"
+            src="images/deal-ana.png"
+            alt="Deal Ana"
           />
           <div
             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
           >
-            <h3>30% Off | Bloom Plant</h3>
+            <h3>30% Off | Ana Plant</h3>
             <h3 class="underline">Shop Now</h3>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Join the colorful branch -->
+    <!-- Join the colorful branch Section -->
     <section class="mt-20 text-center relative">
-      <img class="w-full" src="images/join-flower.png" alt="Join Flower" />
+      <img class="w-full rounded-md" src="images/join-flower.png" alt="Join Flower" />
 
       <div
         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full"
@@ -286,7 +303,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="mt-20 grid grid-cols-1 gap-10 sm:grid-cols-3">
       <div>
         <img src="images/logo.png" alt="Logo" />
